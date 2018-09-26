@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBackground">
@@ -28,7 +29,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="#fefefe">
 
-            <EditText
+            <utils.CustomEditTextView
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,7 +40,8 @@
                 android:inputType="textNoSuggestions|textCapWords"
                 android:maxLength="30"
                 android:textColor="#fefefe"
-                android:textColorHighlight="@color/borderColor" />
+                android:textColorHighlight="@color/borderColor"
+                app:edittexttypeface="@string/gotham_book" />
         </android.support.design.widget.TextInputLayout>
 
         <View
@@ -58,7 +60,7 @@
             android:layout_below="@+id/devider"
             android:textColorHint="#fefefe">
 
-            <EditText
+            <utils.CustomEditTextView
                 android:id="@+id/user_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,7 +71,8 @@
                 android:inputType="textPassword"
                 android:maxLength="10"
                 android:textColor="#fefefe"
-                android:textColorHighlight="@color/borderColor" />
+                android:textColorHighlight="@color/borderColor"
+                app:edittexttypeface="@string/gotham_book" />
         </android.support.design.widget.TextInputLayout>
 
         <View

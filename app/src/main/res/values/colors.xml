@@ -5,4 +5,5 @@
     <color name="appBackground">#002d42</color>
     <color name="borderColor">#3a6275</color>
     <color name="headerColor">#3a6275</color>
+    <color name="bordere_color">#d8d8d8</color>
 </resources>

@@ -6,4 +6,12 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="gotham_bold">Gotham-Bold</string>
+    <string name="gotham_bold_italic">Gotham-BoldItalic</string>
+    <string name="gotham_book">Gotham-Book</string>
+    <string name="gotham_book_italic">Gotham-BookItalic</string>
+    <string name="gotham_medium">Gotham-Medium</string>
+    <string name="gotham_medium_italic">Gotham-MediumItalic</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 </resources>

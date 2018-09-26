@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle"
+    android:padding="16dp">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/fill_1"
+        app:layout_constraintBottom_toTopOf="@+id/devider"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/service"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="TSRTC"
+            android:textColor="#fefefe"
+            android:textSize="20sp"
+            app:texttypeface="@string/gotham_medium" />
+
+        <utils.CustomTextView
+            android:id="@+id/service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="Service"
+            android:textColor="#fefefe"
+            android:textSize="14sp"
+            app:texttypeface="@string/gotham_book" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/fill_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/devider">
+
+        <LinearLayout
+            android:id="@+id/location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <utils.CustomTextView
+                    android:id="@+id/from_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="Boarding"
+                    android:textColor="#84a9af"
+                    android:textSize="16sp"
+                    app:texttypeface="@string/gotham_book" />
+
+                <utils.CustomTextView
+                    android:id="@+id/from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/from_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="Kondapur"
+                    android:textColor="@color/headerColor"
+                    android:textSize="20sp"
+                    app:texttypeface="@string/gotham_medium" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <utils.CustomTextView
+                    android:id="@+id/to_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="Droppping"
+                    android:textColor="#84a9af"
+                    android:textSize="16sp"
+                    app:texttypeface="@string/gotham_book" />
+
+                <utils.CustomTextView
+                    android:id="@+id/to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/to_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="Marthahali"
+                    android:textColor="@color/headerColor"
+                    android:textSize="20sp"
+                    app:texttypeface="@string/gotham_medium" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dotted_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/location_layout"
+            android:background="@drawable/dotted_line"
+            android:layerType="software" />
+
+        <LinearLayout
+            android:id="@+id/details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dotted_1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <utils.CustomTextView
+                    android:id="@+id/tckt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="Ticket ID"
+                    android:textColor="#84a9af"
+                    android:textSize="16sp"
+                    app:texttypeface="@string/gotham_book" />
+
+                <utils.CustomTextView
+                    android:id="@+id/ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tckt_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="TS4545451"
+                    android:textColor="@color/headerColor"
+                    android:textSize="20sp"
+                    app:texttypeface="@string/gotham_medium" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/dotted_line"
+                android:layerType="software" />
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <utils.CustomTextView
+                    android:id="@+id/amt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="Amount"
+                    android:textColor="#84a9af"
+                    android:textSize="16sp"
+                    app:texttypeface="@string/gotham_book" />
+
+                <utils.CustomTextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/amt_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="850.00"
+                    android:textColor="@color/headerColor"
+                    android:textSize="20sp"
+                    app:texttypeface="@string/gotham_medium" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dotted_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/details_layout"
+            android:background="@drawable/dotted_line"
+            android:layerType="software" />
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/dotted_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/qr" />
+
+
+        <utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qr_code"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="SCAN TO PAY"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            app:texttypeface="@string/gotham_medium" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

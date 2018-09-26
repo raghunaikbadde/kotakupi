@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="texttypeface" format="string" />
+    </declare-styleable>
+    <declare-styleable name="CustomEditTextView">
+        <attr name="edittexttypeface" format="string" />
+    </declare-styleable>
+</resources>

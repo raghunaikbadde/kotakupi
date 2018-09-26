@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="20dp">
+
+    <utils.CustomTextView
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_borders"
+        android:drawableRight="@drawable/shape"
+        android:elevation="5dp"
+        android:gravity="left"
+        android:padding="13dp"
+        android:text="Select service"
+        android:textColor="@color/headerColor"
+        android:textSize="16sp"
+        app:texttypeface="@string/gotham_book" />
+
+    <utils.CustomTextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/service"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="BOOK TICKETS"
+        android:textColor="#fefefe"
+        android:textSize="20sp"
+        app:texttypeface="@string/gotham_medium" />
+
+    <utils.CustomTextView
+        android:id="@+id/from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="@drawable/curved_borders"
+        android:drawableRight="@drawable/shape"
+        android:elevation="5dp"
+        android:gravity="left"
+        android:padding="13dp"
+        android:hint="From"
+        android:textColor="@color/headerColor"
+        android:textColorHint="@color/headerColor"
+        android:textSize="16sp"
+        app:edittexttypeface="@string/gotham_book" />
+
+    <utils.CustomTextView
+        android:id="@+id/to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/from"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/curved_borders"
+        android:drawableRight="@drawable/shape"
+        android:elevation="5dp"
+        android:gravity="left"
+        android:padding="13dp"
+        android:hint="To"
+        android:textColor="@color/headerColor"
+        android:textColorHint="@color/headerColor"
+        android:textSize="16sp"
+        app:edittexttypeface="@string/gotham_book" />
+
+    <ImageView
+        android:id="@+id/proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/to"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/proceed_inactive" />
+
+</RelativeLayout>

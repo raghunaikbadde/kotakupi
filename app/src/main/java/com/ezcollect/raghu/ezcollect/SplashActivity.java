@@ -1,12 +1,13 @@
 package com.ezcollect.raghu.ezcollect;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
+
+import preferences.KotakPreferences;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -15,6 +16,13 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
         startTimer();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     private void startTimer() {
@@ -26,7 +34,13 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 //Launching screen as per conditions
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent;
+                if (KotakPreferences.readBoolean(SplashActivity.this, "isLogin", false)) {
+                    intent = new Intent(SplashActivity.this, MainActivity.class);
+                } else {
+                    intent = new Intent(SplashActivity.this, LoginActivity.class);
+                }
+
                 startActivity(intent);
                 finish();
 
