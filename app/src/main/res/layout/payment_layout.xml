@@ -225,12 +225,12 @@
 
         <ImageView
             android:id="@+id/qr_code"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_below="@+id/dotted_2"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/qr" />
+            android:layout_marginTop="10dp"
+            />
 
 
         <utils.CustomTextView
@@ -238,7 +238,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/qr_code"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:text="SCAN TO PAY"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"

@@ -9,9 +9,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import preferences.KotakPreferences;
 
@@ -19,6 +22,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText mPassWordEt;
     private EditText mUserNameEt;
     private ImageView mLogin;
+    private String TAG ="fcm-LoginActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,6 +30,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.login_activity);
         initViews();
         registerEvents();
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d(TAG, "Refreshed token: " + refreshedToken);
+
     }
 
     private void registerEvents() {

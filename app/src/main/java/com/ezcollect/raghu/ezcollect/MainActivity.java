@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import fragments.BookingHistoryFragment;
 import fragments.FragmentSideMenu;
 import fragments.HomeFragment;
 
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         public void onMenuSeleted(int position) {
             drawerFragment.openDrawer();
-
+            navigateToFragment(new BookingHistoryFragment(),true);
         }
     };
 

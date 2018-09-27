@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+
+    <RelativeLayout
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:background="@drawable/left_fill">
+
+
+        <View
+            android:id="@+id/center"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <utils.CustomTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/center"
+            android:layout_centerHorizontal="true"
+            android:text="28"
+            android:textColor="#fefefe"
+            android:textSize="34sp"
+            app:texttypeface="@string/gotham_medium" />
+
+        <utils.CustomTextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/center"
+            android:layout_centerHorizontal="true"
+            android:text="SEP"
+            android:textColor="#fefefe"
+            android:textSize="16sp"
+            app:texttypeface="@string/gotham_book" />
+        <utils.CustomTextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/month"
+            android:layout_centerHorizontal="true"
+            android:text="2018"
+            android:textColor="#fefefe"
+            android:textSize="16sp"
+            app:texttypeface="@string/gotham_book" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="#fefefe"
+        android:layout_alignTop="@+id/image"
+        android:layout_alignBottom="@+id/image"
+        android:layout_toRightOf="@+id/image"
+        android:paddingLeft="10dp">
+
+        <utils.CustomTextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bus Ticket"
+            android:textColor="@color/headerColor"
+            android:textSize="16sp"
+            app:texttypeface="@string/gotham_book" />
+
+        <utils.CustomTextView
+            android:id="@+id/route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="10dp"
+            android:text="Hyderabad - Bengaluru"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:texttypeface="@string/gotham_medium" />
+
+        <utils.CustomTextView
+            android:id="@+id/tsrtc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/route"
+            android:layout_marginTop="5dp"
+            android:text="TSRTC"
+            android:textColor="@color/headerColor"
+            android:textSize="16sp"
+            app:texttypeface="@string/gotham_book" />
+
+        <utils.CustomTextView
+            android:id="@+id/boarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tsrtc"
+            android:layout_marginTop="5dp"
+            android:text="Boarding at Ameerpet"
+            android:textColor="@color/headerColor"
+            android:textSize="16sp"
+            app:texttypeface="@string/gotham_book" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
